@@ -32,10 +32,10 @@ jobs:
       matrix:
         # This should work with only the `include`s but it currently doesn't because of this bug:
         # https://github.community/t5/How-to-use-Git-and-GitHub/GitHub-Actions-Matrix-options-dont-work-as-documented/td-p/29558
-        target: [i686-unknown-linux-gnu]
+        target: [i686-unknown-linux-musl]
         include:
           - os: ubuntu-latest
-            target: i686-unknown-linux-gnu
+            target: i686-unknown-linux-musl
 
     steps:
     - uses: hecrj/setup-rust-action@v1.3.4
